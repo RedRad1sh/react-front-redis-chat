@@ -1,5 +1,20 @@
 .App {
   text-align: center;
+  background-image: url("./images//609316fc04f7da8f6a26f0d255a70c13.jpg");
+}
+
+.row-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+}
+
+.column-container {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
 }
 
 .App-logo {
@@ -9,29 +24,127 @@
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    animation: App-logo-spin infinite 1s linear;
   }
 }
 
+.send-button {
+  width: max-content;
+  margin-left: 20px;
+}
+
+.send-controls {
+  border-radius: 3px;
+  padding: 20px 40px;
+  margin: 30px auto;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.imgUrlField {
+  flex: 2;
+}
+
+#chatEnd {
+  margin-bottom: -20px;
+}
+
+.nameField {
+  flex: 2;
+}
+
+.messageField {
+  flex: 5;
+  min-width: 200px;
+  width: 50vw;
+}
+
+.loading-label {
+  color: blueviolet;
+}
+
+.textfield {
+  margin-right: 30px !important;
+}
+
+.message-card {
+  width: 90%;
+  border: black;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: row;
+  background-color: rgba(255, 255, 255, 0.445) !important;
+}
+
+.message-card-profile {
+  width: max-content;
+}
+
+.userImage {
+  border: 1px solid;
+  border-radius: 200px;
+  border-color: rgba(0, 0, 0, 0.145);
+  margin: 10px;
+}
+
+.message-header-label {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
+  margin-right: 10px !important;
+  -webkit-line-clamp: 1;
+  text-align: left;
+}
+
+.content-label {
+  text-align: initial;
+}
+
+.scrollable-chat {
+  width: 100%;
+  margin: 0 auto;
+  overflow-y: scroll;
+  height: 500px;
+  /* Set a fixed height */
+}
+
 .App-header {
-  background-color: #282c34;
+  /* background-color: #282c34; */
   min-height: 100vh;
+  min-width: 90vw;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: rgba(32 95 42 / 86%);
 }
 
 .App-link {
   color: #61dafb;
 }
 
+.login-container {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid;
+  border-color: gray;
+  width: 400px !important;
+  height: max-content;
+  padding: 40px 20px !important;
+  background-color: #ffffffbf;
+}
+
+.login-field {
+  margin-bottom: 20px !important;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
