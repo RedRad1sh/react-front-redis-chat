@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/react-front-redis-chat/static/css/main.0dab1e62.css",
-    "main.js": "/react-front-redis-chat/static/js/main.b2e5f70e.js",
+    "main.js": "/react-front-redis-chat/static/js/main.eb24324e.js",
     "static/js/787.963b9769.chunk.js": "/react-front-redis-chat/static/js/787.963b9769.chunk.js",
     "static/media/jpg": "/react-front-redis-chat/static/media/609316fc04f7da8f6a26f0d255a70c13.f3596d7cf1277e6acb52.jpg",
     "static/media/logo.png": "/react-front-redis-chat/static/media/logo.0e3778c7e0c07d358e1e.png",
     "index.html": "/react-front-redis-chat/index.html",
     "main.0dab1e62.css.map": "/react-front-redis-chat/static/css/main.0dab1e62.css.map",
-    "main.b2e5f70e.js.map": "/react-front-redis-chat/static/js/main.b2e5f70e.js.map",
+    "main.eb24324e.js.map": "/react-front-redis-chat/static/js/main.eb24324e.js.map",
     "787.963b9769.chunk.js.map": "/react-front-redis-chat/static/js/787.963b9769.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0dab1e62.css",
-    "static/js/main.b2e5f70e.js"
+    "static/js/main.eb24324e.js"
   ]
 }
