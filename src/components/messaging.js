@@ -1,7 +1,8 @@
 import { getCookie, decodeJwt } from './utils';
+import { server_host } from './global-config';
 
 export function sendMessageSticker(img){
-    var url = "http://localhost:9092/post";
+    var url = `${server_host}/post`;
     const token = getCookie("Authorization");
     const user = decodeJwt(token);
     fetch(url, {
@@ -20,7 +21,7 @@ export function sendMessageSticker(img){
 }
 
 export function sendMessage (messageField) {
-    var url = "http://localhost:9092/post";
+    var url = `${server_host}/post`;
     const token = getCookie("Authorization");
     const user = decodeJwt(token);
     fetch(url, {

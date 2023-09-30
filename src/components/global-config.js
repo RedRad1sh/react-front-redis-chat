@@ -1,0 +1,1 @@
+export const server_host = "http://6c15-185-33-161-27.ngrok-free.app"

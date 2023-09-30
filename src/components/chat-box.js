@@ -9,6 +9,7 @@ import { useNavigate } from "react-router-dom";
 import { getCookie, stickerChooser, checkIfImgUrl } from './utils';
 import { Select, MenuItem } from "@material-ui/core";
 import { sendMessage, sendMessageSticker } from "./messaging";
+import { server_host } from "./global-config";
 
 function setUrl(url) {
     return checkIfImgUrl(url) != null ? url : 'https://images.pngnice.com/download/2007/User-Account-Person-PNG-File.png';
@@ -54,13 +55,9 @@ export const Messages = ({ messages }) => {
 
 export function ChatBox() {
     const messageField = () => document.getElementById('messageField');
-    const nameField = () => document.getElementById('nameField');
-    const imgUrlField = () => document.getElementById('imgUrlField');
     const chatEnd = () => document.getElementById('chatEnd');
     const navigate = useNavigate();
-
     const [messages, setMessages] = useState([])
-    const [token, setToken] = useState();
 
     const updateMessages = (data) => {
         const parsedData = JSON.parse(data);
@@ -84,13 +81,7 @@ export function ChatBox() {
             navigate("/")
         }
 
-        // nameField().disabled = true;
-        // nameField().value = loginValues[0];
-        // imgUrlField().disabled = true;
-        // imgUrlField().value = loginValues[1];
-
-
-        const eventSource = new EventSource(`http://localhost:9092/chatAlive?authToken=${token}`, {
+        const eventSource = new EventSource(`${server_host}/chatAlive?authToken=${token}`, {
             headers: {
                 'Authorization': token
             }
@@ -125,9 +116,9 @@ export function ChatBox() {
                     onChange={handleChange}
                 >
                     <MenuItem value={0} disabled>Stickers</MenuItem>
-                    <MenuItem value={1}><img height="100" src="https://cdn140.picsart.com/279266365020211.png"/></MenuItem>
-                    <MenuItem value={2}><img height="100" src="https://cdn141.picsart.com/317144785180211.png"/></MenuItem>
-                    <MenuItem value={3}><img height="100" src="https://i.pinimg.com/originals/7a/04/20/7a0420e32946f4ee78c19da768e37892.png"/></MenuItem>
+                    <MenuItem value={1}><img height="100" src="https://cdn140.picsart.com/279266365020211.png" /></MenuItem>
+                    <MenuItem value={2}><img height="100" src="https://cdn141.picsart.com/317144785180211.png" /></MenuItem>
+                    <MenuItem value={3}><img height="100" src="https://i.pinimg.com/originals/7a/04/20/7a0420e32946f4ee78c19da768e37892.png" /></MenuItem>
                 </Select>
                 <Button onClick={sendMsg} className='send-button' align="center" color="primary" variant="h2">
                     SEND MESSAGE
