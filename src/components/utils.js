@@ -1,10 +1,12 @@
 import jwt from 'jwt-decode'
 
 const base64regex = /^([0-9a-zA-Z+/]{4})*(([0-9a-zA-Z+/]{2}==)|([0-9a-zA-Z+/]{3}=))?$/;
+
 const stickerDict = {
     1: 'https://cdn140.picsart.com/279266365020211.png',
     2: 'https://cdn141.picsart.com/317144785180211.png',
-    3: 'https://i.pinimg.com/originals/7a/04/20/7a0420e32946f4ee78c19da768e37892.png'
+    3: 'https://i.pinimg.com/originals/7a/04/20/7a0420e32946f4ee78c19da768e37892.png',
+    4: 'https://c1.cprnt.com/storage/i/27/a8/18/99/ba424d20a9fc7486882c042d/38ece0eb383e1276a281107f94ad360c.png'
 };
 
 
@@ -39,9 +41,16 @@ export function decodeJwt(token) {
 }
 
 export function checkIfImgUrl(url) {
-    return (url != null && url.match(/^http[^\?]*.(jpg|jpeg|gif|png|tiff|bmp)(\?(.*))?$/gmi) != null ? url : null);
+    return (url != null && url.match(/^http[^\?]*.(jpg|jpeg|gif|png|tiff|bmp|webp)(\?(.*))?$/gmi) != null ? url : null);
 }
 
 export function stickerChooser(num) {
     return stickerDict[num];
+}
+
+export const refreshPage = () => {
+    setTimeout(() => {
+        window.location.reload(false);
+    }, 200);
+    console.log('page to reload')
 }

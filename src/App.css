@@ -28,6 +28,14 @@
   }
 }
 
+.main-class {
+  width: 100%;
+}
+
+.stickers-select {
+  margin-right: 10px !important;
+}
+
 .send-button {
   width: max-content;
   margin-left: 20px;
@@ -77,7 +85,7 @@
 }
 
 .message-card-profile {
-  width: max-content;
+  width: 100px;
 }
 
 .userImage {
@@ -99,6 +107,7 @@
 
 .content-label {
   text-align: initial;
+  overflow-wrap: anywhere;
 }
 
 .scrollable-chat {
@@ -138,6 +147,31 @@
 
 .login-field {
   margin-bottom: 20px !important;
+}
+
+.room-select {
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chat-ui {
+  width: 100%;
+}
+
+.room-button {
+  margin-bottom: 20px !important;
+  width: max-content;
+  overflow: visible !important;
+  padding: 3px 8px !important;
+}
+
+.room-card {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+  width: max-content;
+  overflow: visible !important;
 }
 
 @keyframes App-logo-spin {

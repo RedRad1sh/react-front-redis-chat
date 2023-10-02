@@ -3,6 +3,7 @@ import React, { useEffect} from "react"
 import { ChatBox, } from './components/chat-box';
 import { RegisterForm } from './components/register-form';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 
 function App() {
   useEffect(() => {
@@ -11,12 +12,12 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <BrowserRouter>
+        <HashRouter>
           <Routes >
-            <Route path="/" element={<RegisterForm></RegisterForm>}/>
+            <Route exact path="/" element={<RegisterForm></RegisterForm>}/>
             <Route path="/chat" element={<ChatBox></ChatBox>}/>
           </Routes >
-        </BrowserRouter>
+        </HashRouter>
       </header>
     </div>
   );
